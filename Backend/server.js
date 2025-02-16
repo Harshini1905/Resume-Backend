@@ -10,12 +10,20 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // CORS options
-const corsOptions = {
-  origin: 'https://resume-backend-2-8p3o.onrender.com',
-  credentials: true,
-};
+const cors = require("cors");
 
-app.use(cors(corsOptions));
+const allowedOrigins = [
+  "https://resume-frontend-xi.vercel.app" // ✅ Add your frontend URL here
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
+
+
+
 app.use(express.json()); // Use express.json() for parsing JSON bodies
 
 // MongoDB connection setup
