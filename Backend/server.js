@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 // CORS options
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://resume-backend-2-8p3o.onrender.com',
   credentials: true,
 };
 
