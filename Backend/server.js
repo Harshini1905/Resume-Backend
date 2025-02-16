@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // CORS options
-const cors = require("cors");
+
 
 const allowedOrigins = [
   "https://resume-frontend-xi.vercel.app" // ✅ Add your frontend URL here
